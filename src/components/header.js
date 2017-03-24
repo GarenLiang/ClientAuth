@@ -13,7 +13,7 @@ class Header extends Component {
         <li className="nav-item" key={1}>
           <Link className="nav-link" to="signin">Sign In</Link>
         </li>,
-        <li className="nav-item" kry={2}>
+        <li className="nav-item" key={2}>
           <Link className="nav-link" to="/signup">Sign Up</Link>
         </li>
       ];
@@ -35,4 +35,4 @@ function mapStateToProps(state) {
     authenticated: state.auth.authenticated
   };
 }
-export default connect()(Header);
+export default connect(mapStateToProps)(Header);
